@@ -1,10 +1,14 @@
 package game;
 
 import java.awt.EventQueue;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import gui.Adventure;
 import gui.Main_Menu;
-import rooms.RoomManager;
 
 public class Game{
 	
@@ -13,24 +17,21 @@ public class Game{
     public static void main(String[] args) throws InterruptedException {
     	
     	try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Adventure.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Adventure.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Adventure.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Adventure.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Adventure.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Adventure.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Adventure.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(Adventure.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-    	// Creating rooms
-    	createRooms();
     	
         /* Create and display the form */
         EventQueue.invokeLater(new Runnable() {
@@ -39,8 +40,4 @@ public class Game{
             }
         });
     }
-
-	private static void createRooms() {
-		RoomManager.getManager().CreateRoom("Living Room", new String[] {"Hello %Username%!","We're now in the %RoomName%!", "and its now: %Time%!"});
-	}
 }

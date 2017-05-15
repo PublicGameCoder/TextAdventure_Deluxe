@@ -1,32 +1,46 @@
 package rooms;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 import game.Game;
 import gui.Adventure;
 
 public class Room {
 	
-	private String name;
-	private String[] text;
-
-	public Room(String name, String[] args) {
-		this.name = name;
-		this.text = args;
-	}
+	protected String name;
+	private String[] basicText;
+	protected String[] lookCMDs;
+	protected String[] goCMDs;
+	protected String[] pickupCMDs;
 	
 	public String getName() {
 		return this.name;
 	}
 	
-	public void setText(String[] args) {
-		this.text = args;
+	public String[] getlookCMDs() {
+		return this.lookCMDs;
 	}
 	
-	public String[] getText() {
-		return this.text;
+	public String[] getgoCMDs() {
+		return this.lookCMDs;
 	}
-	public void PrintSlow(long miliseconds) {
+	
+	public String[] getpickupCMDs() {
+		return this.lookCMDs;
+	}
+	
+	public void setBasicText(String[] args) {
+		this.basicText = args;
+	}
+	
+	public String[] getBasicText() {
+		return this.basicText;
+	}
+	
+	public void PrintSlow(String[] strArray,long miliseconds) {
 		
-		for (String message : text) {
+		for (String message : strArray) {
 			message = PlaceholderHandler(message);
 			
 			try {
@@ -48,15 +62,16 @@ public class Room {
 			Adventure.ChatBoxOutput.setText(Adventure.ChatBoxOutput.getText() + "\n" );
 		}
 		Adventure.CMDExpected = true;
-		
 	}
 	
 		
 	
-	public String PlaceholderHandler(String message) {
+	private String PlaceholderHandler(String message) {
 		message = ReplacePlaceHolder(message, "%RoomName%", this.name);
 		message = ReplacePlaceHolder(message, "%Username%", Game.username);
+		message = ReplacePlaceHolder(message, "%Time%", DateFormat.getTimeInstance().format(new Date()));
 		return message;
+		
 	}
 	
 	private String ReplacePlaceHolder(String str,String placeholder, String replacement) {

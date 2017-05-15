@@ -30,7 +30,10 @@ import javax.swing.WindowConstants;
 
 import game.CommandHandler;
 import game.Game;
+import game.Player;
+import rooms.Room;
 import rooms.RoomManager;
+import rooms.RoomManager.RoomsEnum;
 
 /**
  *
@@ -47,7 +50,7 @@ public class Adventure extends JFrame {
     private JLabel ChatMessageLabel;
     private JMenuItem GameMenubutton;
     private JPanel GamePanel;
-    public static							 JPanel ItemBox;
+    public static JPanel ItemBox;
     private JLabel ItemsLabel;
     private JScrollPane OutputScrollPane;
     private JButton SendButton;
@@ -58,6 +61,9 @@ public class Adventure extends JFrame {
     private JMenuBar jMenuBar1;
     private JScrollPane jScrollPane2;
     private JTextArea jTextArea1;
+    
+    private static Player player;
+    
 
     private final Main_Menu main_Menu;
     public static boolean CMDExpected = false;
@@ -69,7 +75,7 @@ public class Adventure extends JFrame {
         ChangeUsernamePanel.setVisible(false);
     }
 
-    private void initComponents() {
+	private void initComponents() {
     	
         GamePanel = new JPanel();
         OutputScrollPane = new JScrollPane();
@@ -90,6 +96,10 @@ public class Adventure extends JFrame {
         jMenu1 = new JMenu();
         GameMenubutton = new JMenuItem();
         UsernameMenubutton = new JMenuItem();
+        
+        player = new Player();
+        
+        player.enterRoom(RoomManager.getManager().getRoomByEnum(RoomsEnum.Living_Room));
 
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("TextAdventure Deluxe");
@@ -293,9 +303,8 @@ public class Adventure extends JFrame {
     private void SendButtonActionPerformed(ActionEvent evt) {
         if (CMDExpected == false) {
         	
-        	
-        	RoomManager.getManager().getRoom("Living Room").PrintSlow(75);
-        	
+        	Room room = RoomManager.getManager().getRoomByName(player.getRoom().getName());
+        	room.PrintSlow(room.getBasicText(),75);
         	
         	return;
         }
@@ -308,4 +317,9 @@ public class Adventure extends JFrame {
     public void clearChatBoxOutput() {
     	ChatBoxOutput.setText("");
     }
+
+	public static Player getPlayer() {
+		// TODO Auto-generated method stub
+		return player;
+	}
 }

@@ -5,6 +5,22 @@
  */
 package gui;
 
+import javax.swing.GroupLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.KeyStroke;
+import javax.swing.LayoutStyle;
+import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
+
 import game.Game;
 
 /**
@@ -12,20 +28,20 @@ import game.Game;
  * @author mike de groot
  */
 @SuppressWarnings("serial")
-public class Main_Menu extends javax.swing.JFrame {
+public class Main_Menu extends JFrame {
 	
-	private javax.swing.JPanel ChangeUsernamePanel;
-    private javax.swing.JPanel GamePanel;
-    private javax.swing.JMenuItem MainMenuMenubutton;
-    private javax.swing.JPanel MainMenuPanel;
-    private javax.swing.JMenuItem UsernameMenubutton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+	private JPanel ChangeUsernamePanel;
+    private JPanel GamePanel;
+    private JMenuItem MainMenuMenubutton;
+    private JPanel MainMenuPanel;
+    private JMenuItem UsernameMenubutton;
+    private JButton jButton1;
+    private JLabel jLabel1;
+    private JLabel jLabel2;
+    private JMenu jMenu1;
+    private JMenuBar jMenuBar1;
+    private JScrollPane jScrollPane1;
+    private JTextArea jTextArea1;
 
 	Adventure adventure;
     private static boolean OnesExecuted;
@@ -44,50 +60,50 @@ public class Main_Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        GamePanel = new javax.swing.JPanel();
-        MainMenuPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        ChangeUsernamePanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        MainMenuMenubutton = new javax.swing.JMenuItem();
-        UsernameMenubutton = new javax.swing.JMenuItem();
+        GamePanel = new JPanel();
+        MainMenuPanel = new JPanel();
+        jButton1 = new JButton();
+        jLabel1 = new JLabel();
+        ChangeUsernamePanel = new JPanel();
+        jScrollPane1 = new JScrollPane();
+        jTextArea1 = new JTextArea();
+        jLabel2 = new JLabel();
+        jMenuBar1 = new JMenuBar();
+        jMenu1 = new JMenu();
+        MainMenuMenubutton = new JMenuItem();
+        UsernameMenubutton = new JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(true);
 
         jButton1.setText("Start");
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.setVerticalTextPosition(SwingConstants.BOTTOM);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/rsz_1textadventure_deluxe_dislplayimage.png")));
+        jLabel1.setIcon(new ImageIcon(getClass().getResource("/Images/rsz_1textadventure_deluxe_dislplayimage.png")));
 
-        javax.swing.GroupLayout MainMenuPanelLayout = new javax.swing.GroupLayout(MainMenuPanel);
+        GroupLayout MainMenuPanelLayout = new GroupLayout(MainMenuPanel);
         MainMenuPanel.setLayout(MainMenuPanelLayout);
         MainMenuPanelLayout.setHorizontalGroup(
-            MainMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainMenuPanelLayout.createSequentialGroup()
+            MainMenuPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, MainMenuPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(MainMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(MainMenuPanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         MainMenuPanelLayout.setVerticalGroup(
-            MainMenuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MainMenuPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            MainMenuPanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, MainMenuPanelLayout.createSequentialGroup()
+                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 67, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -101,48 +117,48 @@ public class Main_Menu extends javax.swing.JFrame {
         jTextArea1.getAccessibleContext().setAccessibleName("Username");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
         jLabel2.setText("Change your nickname!");
 
-        javax.swing.GroupLayout ChangeUsernamePanelLayout = new javax.swing.GroupLayout(ChangeUsernamePanel);
+        GroupLayout ChangeUsernamePanelLayout = new GroupLayout(ChangeUsernamePanel);
         ChangeUsernamePanel.setLayout(ChangeUsernamePanelLayout);
         ChangeUsernamePanelLayout.setHorizontalGroup(
-            ChangeUsernamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ChangeUsernamePanelLayout.createSequentialGroup()
+            ChangeUsernamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, ChangeUsernamePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(ChangeUsernamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
+                .addGroup(ChangeUsernamePanelLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, 659, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         ChangeUsernamePanelLayout.setVerticalGroup(
-            ChangeUsernamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ChangeUsernamePanelLayout.createSequentialGroup()
+            ChangeUsernamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addGroup(GroupLayout.Alignment.TRAILING, ChangeUsernamePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
+                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout GamePanelLayout = new javax.swing.GroupLayout(GamePanel);
+        GroupLayout GamePanelLayout = new GroupLayout(GamePanel);
         GamePanel.setLayout(GamePanelLayout);
         GamePanelLayout.setHorizontalGroup(
-            GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainMenuPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            GamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(MainMenuPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(GamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addGroup(GamePanelLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ChangeUsernamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ChangeUsernamePanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         GamePanelLayout.setVerticalGroup(
-            GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(MainMenuPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(GamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            GamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(MainMenuPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+            .addGroup(GamePanelLayout.createParallelGroup(GroupLayout.Alignment.LEADING)
                 .addGroup(GamePanelLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(ChangeUsernamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ChangeUsernamePanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(100, Short.MAX_VALUE)))
         );
 
@@ -151,7 +167,7 @@ public class Main_Menu extends javax.swing.JFrame {
 
         jMenu1.setText("Options");
 
-        MainMenuMenubutton.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        MainMenuMenubutton.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
         MainMenuMenubutton.setText("Main menu");
         MainMenuMenubutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +176,7 @@ public class Main_Menu extends javax.swing.JFrame {
         });
         jMenu1.add(MainMenuMenubutton);
 
-        UsernameMenubutton.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        UsernameMenubutton.setAccelerator(KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
         UsernameMenubutton.setText("Username");
         UsernameMenubutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,15 +189,15 @@ public class Main_Menu extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(GamePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(GamePanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(GamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+            .addComponent(GamePanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
